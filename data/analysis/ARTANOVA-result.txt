@@ -1,0 +1,60 @@
+#Analysis for reaction time
+
+'data.frame':	720 obs. of  4 variables:
+ $ Subject  : int  1 1 1 1 1 1 1 1 1 1 ...
+ $ Trial    : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ Condition: chr  "sham" "sham" "sham" "sham" ...
+ $ RT       : num  217 218 201 201 218 ...
+
+Analysis of Variance of Aligned Rank Transformed Data
+
+Table Type: Analysis of Deviance Table (Type III Wald F tests with Kenward-Roger df) 
+Model: Mixed Effects (lmer)
+Response: art(RT)
+
+                        F Df Df.res    Pr(>F)   
+1 Condition       4.96054  2    649 0.0072772 **
+2 Trial           1.44416 19    649 0.0995262  .
+3 Condition:Trial 0.88639 38    649 0.6667241   
+---
+Signif. codes:   0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+ contrast   estimate   SE  df t.ratio p.value       d
+ ems - sham   -37.35 15.6 649  -2.400  0.0439 -0.2191
+ ems - tms      8.82 15.6 649   0.567  0.8378  0.0517
+ sham - tms    46.17 15.6 649   2.967  0.0088  0.2708
+
+Results are averaged over the levels of: Trial 
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+#Analysis for agency
+
+'data.frame':	720 obs. of  4 variables:
+ $ Subject  : int  1 1 1 1 1 1 1 1 1 1 ...
+ $ Trial    : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ Condition: chr  "sham" "sham" "sham" "sham" ...
+ $ Agency   : int  7 7 7 7 7 6 7 7 7 7 ...
+
+Analysis of Variance of Aligned Rank Transformed Data
+
+Table Type: Analysis of Deviance Table (Type III Wald F tests with Kenward-Roger df) 
+Model: Mixed Effects (lmer)
+Response: art(Agency)
+
+                         F Df Df.res  Pr(>F)    
+1 Condition       483.8651  2    649 < 2e-16 ***
+2 Trial             1.1641 19    649 0.28262    
+3 Condition:Trial   1.1065 38    649 0.30697    
+---
+Signif. codes:   0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+ contrast   estimate   SE  df t.ratio p.value      d
+ ems - sham   -322.2 11.4 649 -28.367  <.0001 -2.590
+ ems - tms    -286.7 11.4 649 -25.242  <.0001 -2.304
+ sham - tms     35.5 11.4 649   3.125  0.0053  0.285
+
+Results are averaged over the levels of: Trial 
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
